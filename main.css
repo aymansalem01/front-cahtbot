@@ -1,0 +1,158 @@
+ body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #343541;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  min-height: 100vh;
+  background-color: #202123;
+  border-right: solid 1px #565869;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.sidebar button:hover {
+  background-color: #0e8f6f;
+}
+
+.sidebar .chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar .chat-list div {
+  padding: 10px;
+  color: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.sidebar .chat-list div:hover {
+  background-color: #2a2b32;
+}
+
+/* Main area */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 80%;
+}
+
+#response {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.ai {
+  background-color: #444654;
+  color: white;
+  border-top-left-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user {
+  background-color: #10a37f;
+  color: white;
+  margin-left: auto;
+  border-top-right-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styling */
+#response::-webkit-scrollbar {
+  width: 8px;
+}
+#response::-webkit-scrollbar-thumb {
+  background: #565869;
+  border-radius: 4px;
+}
+
+/* Chat input area */
+.container-fluid {
+  position: sticky;
+  bottom: 0;
+  background-color: #343541;
+  padding: 15px 20px;
+  border-top: 1px solid #565869;
+}
+
+#message {
+  flex: 1;
+  background-color: #40414f;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+#message:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #10a37f;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: #10a37f;
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0e8f6f;
+}
+
+form.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
